@@ -1,8 +1,8 @@
 import re
 from datetime import datetime
 
-from core_utils import main
-from _env import FILE_REGEX
+from exif_core import main
+from _exif import FILE_REGEX
 
 
 # noinspection PyUnusedLocal

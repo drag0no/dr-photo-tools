@@ -6,7 +6,7 @@ from zoneinfo import ZoneInfo
 
 from timezonefinder import TimezoneFinder
 
-from core_pixel import RenameData, FailData, main
+from pixel_core import RenameData, FailData, main
 from _pixel import VIDEO_PATTERN, GPS_REGEX
 
 

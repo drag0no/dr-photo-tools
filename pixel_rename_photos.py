@@ -2,7 +2,7 @@ import os
 
 import piexif
 
-from core_pixel import RenameData, FailData, main
+from pixel_core import RenameData, FailData, main
 from _pixel import PHOTO_PATTERN
 
 

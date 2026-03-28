@@ -3,8 +3,8 @@ from datetime import datetime
 
 import piexif
 
-from core_utils import main
-from _env import TIME_DELTA, FILE_REGEX
+from exif_core import main
+from _exif import TIME_DELTA, FILE_REGEX
 
 
 def get_date_from_exif_created(exif_dict: dict) -> datetime:

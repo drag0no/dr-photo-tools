@@ -1,6 +1,6 @@
 import piexif
 
-from core_utils import main
+from exif_core import main
 
 
 # noinspection PyUnusedLocal
