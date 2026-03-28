@@ -3,13 +3,8 @@ from datetime import datetime
 
 import piexif
 
-from core_utils import (
-    get_file_path_list,
-    get_updated_exif_data,
-    update_files_exif
-)
-
-from _env import DIR_PATH, TIME_DELTA, FILE_REGEX
+from core_utils import main
+from _env import TIME_DELTA, FILE_REGEX
 
 
 def get_date_from_exif_created(exif_dict: dict) -> datetime:
@@ -38,12 +33,5 @@ def skip_file(file_path: str, exif_dict: dict) -> bool:
     return False
 
 
-def main() -> None:
-    file_path_list = get_file_path_list(DIR_PATH)
-    updated_exif_data = get_updated_exif_data(file_path_list, get_date, skip_file)
-    print('**********')
-    update_files_exif(updated_exif_data)
-
-
 if __name__ == '__main__':
-    main()
+    main(get_date, skip_file, True)
