@@ -1,12 +1,13 @@
 from os import listdir
-from os.path import isfile, join
+from os.path import expanduser, isfile, join
 from typing import Callable
 
 import piexif
 
 
 def get_file_path_list(path: str) -> list[str]:
-    return [join(path, f) for f in listdir(path) if isfile(join(path, f))]
+    f_path = expanduser(path)
+    return [join(f_path, f) for f in listdir(f_path) if isfile(join(f_path, f))]
 
 
 def get_updated_exif_data(
